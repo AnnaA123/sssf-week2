@@ -9,9 +9,7 @@ router.get('/', cat_list_get);
 
 router.get('/:id', cat_get);
 
-/*router.get('/:id', (req, res) => {
-  res.send('You requested a cat whose id is ' + req.params.id);
-});*/
+/* test */
 
 router.post('/', (req, res) => {
   res.send('From this endpoint you can add cats.');
