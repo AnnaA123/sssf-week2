@@ -18,7 +18,8 @@ passport.use(
       return done(null, false);
     }
     // if all is ok
-    return done(null, user.id);
+    delete user.password;
+    return done(null, user);
   })
 );
 
@@ -30,6 +31,10 @@ passport.use(
     },
     (jwtPayload, done) => {
       console.log('payload: ', jwtPayload);
+      const user = getUserLogin(jwtPayload.email);
+      if (user === undefined) {
+        return done(null, false);
+      }
       return done(null, jwtPayload);
     }
   )

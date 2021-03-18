@@ -16,7 +16,7 @@ const users = [
 
 const getUserLogin = (email) => {
   try {
-    const user = users.filter((user) => user.email === email);
+    const user = users.filter((user) => user.email === email).pop();
     return user;
   } catch (e) {
     console.log('error', e.message);
