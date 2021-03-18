@@ -12,12 +12,6 @@ const users = [
     email: 'jane@metropolia.fi',
     password: 'qwer',
   },
-  {
-    id: '3',
-    name: 'Matti Meikäläinen',
-    email: 'matti@metropolia.fi',
-    password: 'asdf',
-  },
 ];
 
 module.exports = {

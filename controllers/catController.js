@@ -9,8 +9,7 @@ const cat_list_get = (req, res) => {
 };
 
 const cat_get = (req, res) => {
-  let cat = JSON.parse(JSON.stringify(cats));
-  res.send(cat.filter((kitty) => kitty.id === req.params.id));
+  res.send(cats.filter((cat) => cat.id === req.params.id));
 };
 
 module.exports = {

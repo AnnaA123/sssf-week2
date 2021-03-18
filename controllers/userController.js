@@ -9,8 +9,7 @@ const user_list_get = (req, res) => {
 };
 
 const user_get = (req, res) => {
-  let user = JSON.parse(JSON.stringify(users));
-  res.send(user.filter((use) => use.id === req.params.id));
+  res.send(users.filter((user) => user.id === req.params.id));
 };
 
 module.exports = {
