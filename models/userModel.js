@@ -14,6 +14,16 @@ const users = [
   },
 ];
 
+const getUserLogin = async (params) => {
+  try {
+    console.log(params);
+    const user = users.filter((user) => user.email === req.params.email);
+    return user;
+  } catch (e) {
+    console.log('error', e.message);
+  }
+};
+
 module.exports = {
   users,
 };
