@@ -8,7 +8,7 @@ const {getUserLogin} = require('../models/userModel.js');
 passport.use(
   new Strategy((username, password, done) => {
     // get user by username from getUserLogin
-    const user = getUserLogin();
+    const user = getUserLogin(username);
     // if user is undefined
     if (user === undefined) {
       return done(null, false);
